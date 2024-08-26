@@ -1,0 +1,405 @@
+html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: grey;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(65deg, blue, purple);
+    border-radius: 10px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+}
+/* Header */
+header {
+    background-color: rgb(95, 0, 95);
+    color: white;
+    padding: 10px 0;
+}
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    position: relative;
+}
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+.nav-links li {
+    margin: 0 10px;
+    position: relative;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+    display: inline-block;
+}
+.nav-links a:hover {
+    background-color: purple;
+    border-radius: 5px;
+    text-decoration: none;
+}
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1e1e1e;
+    color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    z-index: 2000;
+}
+.dropdown-menu li {
+    margin: 0;
+    list-style: none;
+}
+.dropdown-menu a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+.dropdown-menu a:hover {
+    background-color: purple;
+}
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+/* Main Content */
+main {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+.hero {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 20px;
+}
+.hero button {
+    background-color: rgb(95, 0, 95);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 17px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.hero button:hover {
+    background-color: rgb(56, 0, 56);
+}
+.content {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 30px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+.content h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.content .game-list,
+.content .review-list,
+.content .news-list,
+.content .event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.game-item,
+.review-item,
+.news-item,
+.event-item {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 270px;
+    text-align: center;
+}
+.game-item img,
+.review-item img,
+.news-item img,
+.event-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.game-item h3,
+.review-item h3,
+.news-item h3,
+.event-item h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+a {
+    color: purple;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.read-more {
+    color: purple;
+    text-decoration: none;
+    cursor: pointer;
+}
+.read-more:hover {
+    text-decoration: underline;
+}
+/* Footer */
+footer {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 2px;
+}
+/* Theme Toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: color 0.3s;
+}
+#sun-icon,
+#moon-icon {
+    position: absolute;
+    transition: opacity 0.3s;
+}
+#sun-icon {
+    color: white;
+    opacity: 0;
+}
+#moon-icon {
+    color: black;
+}
+body.dark-mode #moon-icon {
+    opacity: 0;
+}
+body.dark-mode #sun-icon {
+    opacity: 1;
+}
+body.dark-mode header {
+    background-color: #1E1E1E;
+}
+body.dark-mode main {
+    color: #e0e0e0;
+}
+body.dark-mode footer {
+    background-color: #1E1E1E;
+}
+/* contact */
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+#contact h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: white;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: white;
+}
+input,
+textarea {
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+button {
+    padding: 12px 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+    background-color: rgb(87, 0, 87);
+    transform: scale(1.05);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+#about,
+#contact {
+    flex: 1;
+    border: 1px solid #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: black;
+    margin: 20px 0;
+}
+#contact h2,
+#about h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+#about p {
+    padding: 20px;
+    font-size: 18px;
+}
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+    header {
+        flex-direction: column;
+        padding: 10px;
+        position: relative;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgb(95, 0, 95);
+        z-index: 1000;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    .nav-links li {
+        margin: 5px 0;
+    }
+    .nav-links a {
+        padding: 10px;
+        font-size: 1em;
+        display: block;
+    }
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2000;
+    }
+    .theme-toggle {
+        display: block;
+        position: relative;
+        right: 50px;
+        top: -18px;
+        z-index: 1000;
+    }
+}
+/* larger screens */
+@media (min-width: 601px) {
+    .menu-toggle {
+        display: none;
+    }
+}

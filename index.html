@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Gaming Hub</div>
+            <button class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li class="dropdown">
+                    <a href="#">More</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle">
+                <!-- <i class="fa-solid fa-sun" id="sun-icon"></i>
+        <i class="fa-solid fa-moon" id="moon-icon"></i> -->
+                <span id="sun-icon">&#9728;</span>
+                <span id="moon-icon">&#9790;</span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <h1>Welcome to Gaming Hub</h1>
+            <p>Your ultimate destination for the latest games, reviews, and news.</p>
+            <button onclick="location.href='#games'">Explore Games</button>
+            <button onclick="location.href='#reviews'">Read Reviews</button>
+        </section>
+        <section class="content" id="games">
+            <h2>Featured Games</h2>
+            <div class="game-list">
+                <div class="game-item">
+                    <img src="game1.jpg">
+                    <h3>PUBG</h3>
+                    <p> A battle royale game where 100 players fight to be the last one standing on a shrinking map.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="game-item">
+                    <img src="game2.png">
+                    <h3>FORTNITE</h3>
+                    <p> A battle royale game featuring building mechanics, where players fight to be the last one standing.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="game-item">
+                    <img src="game3.jpg">
+                    <h3>MINECRAFT</h3>
+                    <p>A sandbox game that lets players build, explore, and survive in a blocky, procedurally generated world.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="game-item">
+                    <img src="game4.jpg">
+                    <h3>AMONG US</h3>
+                    <p>A multiplayer social deduction game where crewmates must identify impostors before being sabotaged.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="game-item">
+                    <img src="game5.jpg">
+                    <h3>VALORANT</h3>
+                    <p>A tactical first-person shooter where teams compete in rounds using unique agent abilities and weapons.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="game-item">
+                    <img src="game6.jpg">
+                    <h3>CALL OF DUTY</h3>
+                    <p>A first-person shooter series featuring intense single-player campaigns and competitive multiplayer modes.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </section>
+        <section class="content" id="reviews">
+            <h2>Latest Reviews</h2>
+            <div class="review-list">
+                <div class="review-item">
+                    <h3>Review PUBG</h3>
+                    <p class="short-text">
+                        It is a battle royale game that offers an intense, realistic shooting experience...
+                    </p>
+                    <p class="full-text" style="display: none;">
+                        It is a battle royale game that offers an intense, realistic shooting experience. Players are
+                        dropped onto an island, scavenging for weapons and equipment while avoiding being eliminated by
+                        other players. The game offers a variety of maps, weapons, and vehicles, making each match
+                        unique and engaging.
+                    </p>
+                    <a href="#" class="read-more">Read Full Review</a>
+                </div>
+                <div class="review-item">
+                    <h3>Review AMONG US</h3>
+                    <p class="short-text">It is a social deduction game where players work together to complete tasks on
+                        a spaceship while trying...</p>
+                    <p class="full-text" style="display: none;">
+                        It is a social deduction game where players work together to complete tasks on a spaceship while
+                        trying to identify the impostors among them. The game is simple yet thrilling, combining
+                        strategy and deception with lighthearted fun. Its easy-to-learn mechanics and cross-platform
+                        play make it accessible and enjoyable for a wide range of players.
+                    </p>
+                    <a href="#" class="read-more">Read Full Review</a>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <section id="about">
+                <h2>About Us</h2>
+                <p>Welcome to our gaming hub! We are a passionate team of gaming enthusiasts committed to delivering reviews, and updates on your favorite games.</p>
+            </section>
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <form action="submit_form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024-Gaming-Hub</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
